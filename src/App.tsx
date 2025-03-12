@@ -7,11 +7,9 @@ import ShoppingCartPage from "./app/pages/ShoppingCar";
 import AboutUsPage from "./app/pages/AboutUs";
 
 
-const baseurl = import.meta.env.BASE_URL;
-
 function App() {
   return (
-    <BrowserRouter basename={baseurl}>
+    <BrowserRouter basename={"/skincare"}>
       <Routes>
         <Route element={<Layout />} >
           <Route path="/" element={<HomePage />} />

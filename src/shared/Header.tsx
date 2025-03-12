@@ -41,7 +41,7 @@ const Header: React.FunctionComponent<IHeaderProps> = ({ menus, children }) => {
   return (
     <header className='w-screen h-[70px] bg-primary flex flex-row justify-between py-5 items-center pr-10 shadow-2xl'>
       <div className='bg-white h-[70px] w-[100px] flex flex-col rounded-r-lg'>
-        <img className="max-h-[70px] w-auto object-cover" src="/logo.svg" alt="Logo" />
+        <img className="max-h-[70px] w-auto object-cover" src="/skincare/logo.svg" alt="Logo" />
       </div>
 
 

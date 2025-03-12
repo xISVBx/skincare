@@ -7,43 +7,42 @@ import FloatingChat from '../../shared/FloatingChat';
 const banner: Slides[] = [
     {
         type: "image",
-        src: "/images/publicidad.jpg"
+        src: "/skincare/images/publicidad.jpg"
     },
 
     {
         type: "image",
-        src: "/images/publicidad2.jpg"
+        src: "/skincare/images/publicidad2.jpg"
     },
     {
         type: "image",
-        src: "/images/publicidad3.jpg"
+        src: "/skincare/images/publicidad3.jpg"
     },
     {
         type: "image",
-        src: "/images/publicidad4.jpg"
+        src: "/skincare/images/publicidad4.jpg"
     }
 ]
 export const products: CarrouselItem[] = [
     {
         name: "CeraVe Hydrating Facial Cleanser - 16oz",
-        description: "Un limpiador facial suave con ácido hialurónico y ceramidas para mantener la hidratación de la piel.",
-        imagePath: "/products/product1.png",
+        description: "A gentle facial cleanser with hyaluronic acid and ceramides to maintain skin hydration.",
+        imagePath: "/skincare/products/product1.png",
         price: "100000"
     },
     {
         name: "Neutrogena Hydro Boost Water Gel - 50ml",
-        description: "Hidratante ligero con ácido hialurónico que proporciona una hidratación intensa sin sensación grasosa.",
-        imagePath: "/products/product2.png",
+        description: "A lightweight moisturizer with hyaluronic acid that provides intense hydration without a greasy feel.",
+        imagePath: "/skincare/products/product2.png",
         price: "120000"
     },
     {
         name: "The Ordinary Niacinamide 10% + Zinc 1% - 30ml",
-        description: "Suero concentrado que ayuda a reducir la apariencia de los poros y mejora la textura de la piel.",
-        imagePath: "/products/product3.png",
+        description: "A concentrated serum that helps reduce the appearance of pores and improves skin texture.",
+        imagePath: "/skincare/products/product3.png",
         price: "85000"
     }
 ];
-
 
 interface IHomePageProps {
 }

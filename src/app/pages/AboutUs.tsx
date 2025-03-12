@@ -24,7 +24,7 @@ const AboutUsPage: React.FC = () => {
                 {/* Imagen */}
                 <div className="mt-6 flex justify-center">
                     <img 
-                        src="/images/publicidad3.jpg" 
+                        src="/skincare/images/publicidad3.jpg" 
                         alt="Makeup & Confidence" 
                         className="w-full md:w-3/4 rounded-2xl shadow-lg border-4 border-pink-300"
                     />
@@ -60,7 +60,7 @@ const AboutUsPage: React.FC = () => {
                 {/* Imagen final */}
                 <div className="mt-6 flex justify-center">
                     <img 
-                        src="/images/publicidad4.jpg" 
+                        src="/skincare/images/publicidad4.jpg" 
                         alt="Confident Girl" 
                         className="w-full md:w-3/4 rounded-2xl shadow-lg border-4 border-pink-300"
                     />
