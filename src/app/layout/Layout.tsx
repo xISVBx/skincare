@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { MdAccountCircle } from "react-icons/md";
 import { IoExitOutline } from "react-icons/io5";
 import Header, { Menu } from '../../shared/Header';
@@ -56,27 +56,29 @@ const adminHeader: Menu[] = [
     }
 ]
 
-const adminProfileOption: ProfileOption[] = [
-    {
-        label: "My account",
-        onClick: () => { },
-        Icon: <MdAccountCircle className='h-full w-full text-gray-400'/>
-    },
-    {
-        label: "Shoppingcart",
-        onClick: () => { 
 
-        },
-        Icon: <FaCartShopping className='h-full w-full text-gray-400' />,
-    },
-    {
-        label: "Logout",
-        onClick: () => { },
-        Icon: <IoExitOutline className='h-full w-full text-gray-400'/>
-    }
-]
 
 const Layout: React.FunctionComponent<ILayoutProps> = () => {
+    const navigate = useNavigate()
+    const adminProfileOption: ProfileOption[] = [
+        {
+            label: "My account",
+            onClick: () => { },
+            Icon: <MdAccountCircle className='h-full w-full text-gray-400'/>
+        },
+        {
+            label: "shopping cart",
+            onClick: () => { 
+                navigate('/shoppingcart')
+            },
+            Icon: <FaCartShopping className='h-full w-full text-gray-400' />,
+        },
+        {
+            label: "Logout",
+            onClick: () => { },
+            Icon: <IoExitOutline className='h-full w-full text-gray-400'/>
+        }
+    ]
     return (
         <>
             <Header menus={adminHeader}
