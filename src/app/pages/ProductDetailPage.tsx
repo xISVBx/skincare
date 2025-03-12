@@ -6,7 +6,7 @@ import { products } from "./HomePage";
 const ProductDetailPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const product = products[Number(id)];
-    const [rating, setRating] = React.useState(4);
+    const [rating, _] = React.useState(4);
     const [comment, setComment] = React.useState("");
     const [comments, setComments] = React.useState<string[]>([]);
     const [cart, setCart] = React.useState<{ name: string; price: string; imagePath: string }[]>([]);

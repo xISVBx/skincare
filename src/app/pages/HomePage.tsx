@@ -48,7 +48,7 @@ export const products: CarrouselItem[] = [
 interface IHomePageProps {
 }
 
-const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
+const HomePage: React.FunctionComponent<IHomePageProps> = () => {
     return (
         <div>
             <CarrousellFull slides={banner} />

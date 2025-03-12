@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Outlet } from 'react-router-dom';
-import { FaLanguage,  } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
 import { IoExitOutline } from "react-icons/io5";
 import Header, { Menu } from '../../shared/Header';
@@ -77,7 +76,7 @@ const adminProfileOption: ProfileOption[] = [
     }
 ]
 
-const Layout: React.FunctionComponent<ILayoutProps> = (props) => {
+const Layout: React.FunctionComponent<ILayoutProps> = () => {
     return (
         <>
             <Header menus={adminHeader}
