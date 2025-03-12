@@ -22,29 +22,29 @@ const adminHeader: Menu[] = [
         options: [
             {
                 link: '',
-                name: 'Limpieza facial'
+                name: 'Facial Cleansers'
             },
             {
                 link: '',
-                name: 'Hidratantes'
+                name: 'Moisturizers'
             },
             {
                 link: '',
-                name: 'Mascarillas'
+                name: 'Masks'
             },
             {
                 link: '',
-                name: 'Protectores solares'
+                name: 'Sunscreens'
             },
             {
                 link: '',
-                name: 'Kits y sets'
+                name: 'Kits and Sets'
             }
         ]
     },
     {
         link: '',
-        name: 'Kinds of skins'
+        name: 'Skin Types'
     },
     {
         link: '/workshops',
@@ -52,7 +52,7 @@ const adminHeader: Menu[] = [
     },
     {
         link: '/aboutus',
-        name: 'About us'
+        name: 'About Us'
     }
 ]
 

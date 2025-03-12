@@ -1,6 +1,12 @@
 import * as React from "react";
 
-const items = ["bg-blue-200", "bg-green-200", "bg-slate-200", "bg-yellow-200", "bg-purple-200"];
+const categories = [
+    { name: "Facial Cleansers", color: "bg-pink-300" },
+    { name: "Moisturizers", color: "bg-purple-300" },
+    { name: "Masks", color: "bg-rose-300" },
+    { name: "Sunscreens", color: "bg-fuchsia-300" },
+    { name: "Kits and Sets", color: "bg-rose-400" }
+];
 
 const animationDuration = 500;
 
@@ -10,20 +16,16 @@ const Carrousel3D: React.FC = () => {
 
     const nextSlide = () => {
         if (isAnimating) return;
-        setIsAnimating(true)
-        setIndex((prev) => (prev + 1) % items.length);
-        setTimeout(() => {
-            setIsAnimating(false)
-        }, animationDuration)
+        setIsAnimating(true);
+        setIndex((prev) => (prev + 1) % categories.length);
+        setTimeout(() => setIsAnimating(false), animationDuration);
     };
 
     const prevSlide = () => {
         if (isAnimating) return;
-        setIsAnimating(true)
-        setIndex((prev) => (prev - 1 + items.length) % items.length);
-        setTimeout(() => {
-            setIsAnimating(false)
-        }, animationDuration)
+        setIsAnimating(true);
+        setIndex((prev) => (prev - 1 + categories.length) % categories.length);
+        setTimeout(() => setIsAnimating(false), animationDuration);
     };
 
     return (
@@ -36,33 +38,35 @@ const Carrousel3D: React.FC = () => {
                 {"<"}
             </button>
 
-            <div className="relative w-[60%] flex justify-center items-center h-[400px]">
-                {items.map((item, i) => {
-                    let relativeIndex = (i - index + items.length) % items.length;
+            <div className="relative w-[60%] flex justify-center items-center h-[200px]">
+                {categories.map((category, i) => {
+                    let relativeIndex = (i - index + categories.length) % categories.length;
 
-                    if (relativeIndex > Math.floor(items.length / 2)) {
-                        relativeIndex -= items.length;
+                    if (relativeIndex > Math.floor(categories.length / 2)) {
+                        relativeIndex -= categories.length;
                     }
 
                     let translateX = relativeIndex * 120;
                     let scale = relativeIndex === 0 ? 1.2 : 0.9; // Centro más grande
                     let opacity = Math.abs(relativeIndex) > 1 ? 0 : 1; // Solo 3 elementos visibles
-                    let visibility: 'visible' | 'hidden' = Math.abs(relativeIndex) > 1 ? 'hidden' : 'visible';
+                    let visibility: "visible" | "hidden" = Math.abs(relativeIndex) > 1 ? "hidden" : "visible";
                     let zIndex = relativeIndex === 0 ? 10 : 5;
 
                     return (
                         <div
                             key={i}
-                            className={`absolute ${item} rounded-lg transition-all duration-500`}
+                            className={`absolute ${category.color} rounded-lg transition-all duration-500 flex items-center justify-center shadow-lg`}
                             style={{
                                 width: "40%",
-                                height: "300px",
+                                height: "80px",
                                 transform: `translateX(${translateX}%) scale(${scale})`,
                                 zIndex,
                                 opacity,
                                 visibility,
                             }}
-                        />
+                        >
+                            <span className="text-lg font-semibold text-gray-700">{category.name}</span>
+                        </div>
                     );
                 })}
             </div>

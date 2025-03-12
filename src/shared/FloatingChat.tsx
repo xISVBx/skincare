@@ -31,7 +31,7 @@ const FloatingChat: React.FunctionComponent = () => {
         <>
             {/* Botón flotante */}
             <button 
-                className="fixed bottom-6 right-6 bg-primary text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition z-50"
+                className="fixed bottom-6 right-6 bg-primary text-white p-4 rounded-full shadow-lg hover:bg-pink-400 transition z-50"
                 onClick={() => setChatOpen(!chatOpen)}
             >
                 {chatOpen ? <FaTimes size={24} /> : <FaComments size={24} />}
@@ -73,7 +73,7 @@ const FloatingChat: React.FunctionComponent = () => {
                             onKeyDown={(e) => e.key === "Enter" && sendMessage()}
                         />
                         <button 
-                            className="bg-primary text-white p-2 rounded-lg hover:bg-blue-700 transition"
+                            className="bg-primary text-white p-2 rounded-lg hover:bg-pink-400 transition"
                             onClick={sendMessage}>
                             <FaPaperPlane />
                         </button>
